@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: patch
+    uri: https://api.yotpo.com/core/v3/stores/foo/orders/70000
+    body:
+      encoding: UTF-8
+      string: '{"order":{"external_id":"1000","order_date":"2022-10-21T15:49:47Z","line_items":[{"external_product_id":"300000","quantity":1}],"customer":{"external_id":"2000"},"order_name":"An
+        edited order"}}'
+    headers:
+      User-Agent:
+      - Faraday v1.10.2
+      Yotpo-Api-Connector:
+      - Ruby1.0.6
+      X-Yotpo-Token:
+      - baz
+      Content-Type:
+      - application/json
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Fri, 21 Oct 2022 16:11:55 GMT
+      Content-Length:
+      - '0'
+      X-Ratelimit-Limit-Second:
+      - '5'
+      X-Ratelimit-Remaining-Second:
+      - '4'
+      Ratelimit-Remaining:
+      - '4'
+      Ratelimit-Limit:
+      - '5'
+      Ratelimit-Reset:
+      - '1'
+      Correlation-Id:
+      - ebaad936-0a71-4eef-b3e6-0e769d78daf5
+      X-Kong-Upstream-Latency:
+      - '3735'
+      X-Kong-Proxy-Latency:
+      - '19'
+      Via:
+      - kong/2.1.4
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+  recorded_at: Fri, 21 Oct 2022 16:11:55 GMT
+recorded_with: VCR 6.1.0

@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: patch
+    uri: https://api.yotpo.com/core/v3/stores/foo/orders/4091816088/fulfillments/1685681195
+    body:
+      encoding: UTF-8
+      string: '{"fulfillment":{"external_id":"3000","fulfillment_date":"2022-10-29T17:01:34Z","status":"success","fulfilled_items":[{"external_product_id":"116072","quantity":1}]}}'
+    headers:
+      User-Agent:
+      - Faraday v1.10.2
+      Yotpo-Api-Connector:
+      - Ruby1.0.6
+      X-Yotpo-Token:
+      - baz
+      Content-Type:
+      - application/json
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Tue, 29 Nov 2022 22:17:05 GMT
+      Content-Length:
+      - '0'
+      X-Ratelimit-Limit-Second:
+      - '5'
+      X-Ratelimit-Remaining-Second:
+      - '4'
+      Ratelimit-Remaining:
+      - '4'
+      Ratelimit-Limit:
+      - '5'
+      Ratelimit-Reset:
+      - '1'
+      Correlation-Id:
+      - a82479a1-ce45-4908-b90a-b7be27d6d95c
+      X-Kong-Upstream-Latency:
+      - '41'
+      X-Kong-Proxy-Latency:
+      - '25'
+      Via:
+      - kong/2.1.4
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+  recorded_at: Tue, 29 Nov 2022 22:17:05 GMT
+recorded_with: VCR 6.1.0

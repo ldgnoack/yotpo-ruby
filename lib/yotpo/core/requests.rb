@@ -19,6 +19,8 @@ module Yotpo
     end
 
     class Request
+      class MissingParameterError < ::StandardError; end
+
       attr_reader :endpoint, :uri, :params, :headers
 
       def initialize(endpoint, params, headers)

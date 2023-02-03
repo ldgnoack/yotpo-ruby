@@ -13,6 +13,7 @@ require 'yotpo/api/order'
 require 'yotpo/api/order_fulfillment'
 require 'yotpo/api/product'
 require 'yotpo/api/product_variant'
+require 'yotpo/api/unsubscriber'
 
 module Yotpo
   class Client
@@ -22,6 +23,7 @@ module Yotpo
     include Yotpo::OrderFulfillment
     include Yotpo::Product
     include Yotpo::ProductVariant
+    include Yotpo::Unsubscriber
 
     #
     # Creates a new instance of Yotpo::Client

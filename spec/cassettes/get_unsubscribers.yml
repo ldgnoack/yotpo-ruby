@@ -1,0 +1,73 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.yotpo.com/apps/foo/unsubscribers
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.10.2
+      Yotpo-Api-Connector:
+      - Ruby1.0.6
+      X-Yotpo-Token:
+      - baz
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Mon, 06 Feb 2023 15:41:48 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Robots-Tag:
+      - noindex
+      Yotpo-Parsed-Request:
+      - '{"format":"json","controller":"unsubscribers","action":"index","app_id":"foo"}'
+      Etag:
+      - W/"3437f9bf67473f604ed73694fd56ed5b"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 2e0ae6e43d3912c2b4f6b1757c449488
+      X-Runtime:
+      - '0.155808'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, OPTIONS, DELETE, PUT, HEAD
+      Access-Control-Allow-Headers:
+      - Authorization,Content-Type,Accept,Origin,User-Agent,DNT,Cache-Control,X-Mx-ReqToken,Keep-Alive,X-Requested-With,If-Modified-Since
+      X-Ratelimit-Remaining-Minute:
+      - '4998'
+      X-Ratelimit-Limit-Minute:
+      - '5000'
+      Ratelimit-Remaining:
+      - '4998'
+      Ratelimit-Limit:
+      - '5000'
+      Ratelimit-Reset:
+      - '12'
+      Correlation-Id:
+      - e119c40c-6259-4ad3-8582-d3a94cc7736c
+      X-Kong-Upstream-Latency:
+      - '159'
+      X-Kong-Proxy-Latency:
+      - '23'
+      Via:
+      - kong/2.1.4
+    body:
+      encoding: ASCII-8BIT
+      string: '{"status":{"code":200,"message":"OK"},"response":{"unsubscribers":[{"id":147391614,"user_email":"ben@example.com","email_type_id":1,"unsubscirbed_by_name":"MODERATOR"},{"id":147391615,"user_email":"george@example.com","email_type_id":1,"unsubscirbed_by_name":"MODERATOR"}]}}'
+  recorded_at: Mon, 06 Feb 2023 15:41:48 GMT
+recorded_with: VCR 6.1.0

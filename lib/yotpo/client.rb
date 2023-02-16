@@ -1,4 +1,5 @@
 require 'active_support/notifications'
+require 'hashie'
 require 'faraday'
 require 'typhoeus'
 require 'typhoeus/adapters/faraday'
@@ -6,51 +7,23 @@ require 'faraday_middleware'
 require 'yotpo/core/requests'
 require 'yotpo/core/response_parser'
 require 'yotpo/version'
+
 require 'yotpo/api/access_token'
-require 'yotpo/api/account'
-require 'yotpo/api/account_platform'
-require 'yotpo/api/account_social'
-require 'yotpo/api/comment'
-require 'yotpo/api/question'
-require 'yotpo/api/answer'
-require 'yotpo/api/feature'
-require 'yotpo/api/oauth'
-require 'yotpo/api/image'
 require 'yotpo/api/order'
 require 'yotpo/api/order_fulfillment'
-require 'yotpo/api/owner_feature'
-require 'yotpo/api/owner_feature_setting'
 require 'yotpo/api/product'
 require 'yotpo/api/product_variant'
-require 'yotpo/api/purchase'
-require 'yotpo/api/reminder'
-require 'yotpo/api/review'
-require 'yotpo/api/user'
+require 'yotpo/api/unsubscriber'
 
 module Yotpo
   class Client
     extend Yotpo::Requests
     include Yotpo::AccessToken
-    include Yotpo::Account
-    include Yotpo::AccountPlatform
-    include Yotpo::AccountSocial
-    include Yotpo::Comment
-    include Yotpo::Feature
-    include Yotpo::Image
-    include Yotpo::Oauth
     include Yotpo::Order
     include Yotpo::OrderFulfillment
-    include Yotpo::OwnerFeature
-    include Yotpo::OwnerFeatureSetting
     include Yotpo::Product
     include Yotpo::ProductVariant
-    include Yotpo::Reminder
-    include Yotpo::Review
-    include Yotpo::User
-    include Yotpo::Question
-    include Yotpo::Answer
-    include Yotpo::Purchase
-
+    include Yotpo::Unsubscriber
 
     #
     # Creates a new instance of Yotpo::Client

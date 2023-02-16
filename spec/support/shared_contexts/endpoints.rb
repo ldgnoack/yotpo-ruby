@@ -1,4 +1,6 @@
 shared_context 'endpoints' do
+  let(:described_class) { Yotpo }
+
   subject { @response.body }
 
   before(:all) do
@@ -7,4 +9,6 @@ shared_context 'endpoints' do
       utoken: 'baz',
     }.freeze
   end
+
+  let(:base_params) { @base_params }
 end

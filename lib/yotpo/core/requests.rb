@@ -41,7 +41,7 @@ module Yotpo
       attr_reader :app_key
 
       def resolve_uri(uri_base)
-        uri_base.gsub(/{(\w+)}/) { |args| uri_replacement_for($1) }
+        uri_base.gsub(/{(\w+)}/) { uri_replacement_for($1) }
       end
 
       def uri_replacement_for(field)
